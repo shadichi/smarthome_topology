@@ -52,24 +52,3 @@ flowchart TB
   CORELIB --> COREASSETS
   UTL --> CORELIB
 ```
-
-
-
-  ```mermaid
-%%{init: {'securityLevel': 'loose'}}%%
-flowchart LR
-  Panel["Admin Panel (Web)"] -->|HTTPS| API["Backend API"]
-  API --> Auth["Auth / Token Service"]
-  API --> CDN["CDN / Storage"]
-  API --> MQTT["MQTT Broker"]
-  API --> Time["Time Server"]
-  API --> DB[(Database)]
-
-  TV1["TV App (Flutter)"] -->|Schedule & Actions| API
-  TV1 -->|Download Videos| CDN
-  TV1 <--> |Realtime Updates| MQTT
-
-  TV2["TV App #2"] --> API
-  TV2 --> CDN
-  TV2 <--> |Sync Actions| MQTT
-```

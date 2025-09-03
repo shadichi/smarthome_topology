@@ -92,7 +92,7 @@ sequenceDiagram
   API-->>APP: 200 {ok, token?}
   APP->>API: GET /device/get-all
   API-->>APP: 200 [devices]
-  ```
+```
 
 ## 2) اجرای سناریو
 ```mermaid
