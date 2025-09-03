@@ -23,32 +23,23 @@
 
 ---
 
-## دیاگرام لایه ها بر مبنای فولدر
+## 🔗 Services Dependency Diagram
 
 ```mermaid
-flowchart TB
-  subgraph UI[UI Layer]
-    SCR[screens]
-    WID[widgets]
-  end
+%%{init: {'securityLevel': 'loose'}}%%
+flowchart LR
+  Panel["Admin Panel (Web)"] -->|HTTPS| API["Backend API"]
+  API --> Auth["Auth / Token Service"]
+  API --> CDN["CDN / Storage"]
+  API --> MQTT["MQTT Broker"]
+  API --> Time["Time Server"]
+  API --> DB[(Database)]
 
-  subgraph Controllers[Controllers Layer]
-    CTR[controllers]
-    PAR[params]
-  end
+  TV1["TV App (Flutter)"] -->|Schedule & Actions| API
+  TV1 -->|Download Videos| CDN
+  TV1 <--> |Realtime Updates| MQTT
 
-  subgraph Core[Core Layer]
-    CORELIB[core/lib]
-    COREASSETS[core/assets]
-    UTL[utilities]
-  end
-
-  SCR --> CTR
-  WID --> CTR
-  CTR --> CORELIB
-  CTR --> PAR
-  CTR --> UTL
-  SCR --> WID
-  CORELIB --> COREASSETS
-  UTL --> CORELIB
-  ```
+  TV2["TV App #2"] --> API
+  TV2 --> CDN
+  TV2 <--> |Sync Actions| MQTT
+```
