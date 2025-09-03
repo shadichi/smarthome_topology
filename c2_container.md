@@ -51,3 +51,4 @@ flowchart TB
   SCR --> WID
   CORELIB --> COREASSETS
   UTL --> CORELIB
+  ```
