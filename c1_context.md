@@ -33,10 +33,9 @@ flowchart LR
   SSE --> Irrigation[Irrigation]
 
   Mobile --> Weather[Weather Service]
+```
 
-  ```
-
-  ## مرزبندی
+## مرزبندی
 
 داخل محدوده: اپ موبایل و TV، تعامل با SSE، هسته‌ی مشترک UI، کنترل بخش‌ها. 
 
