@@ -3,7 +3,7 @@
 - **C4 Views**
   - [C1 — System Context](c1_context.md)
   - [C2 — Containers](c2_container.md)
-  - [C3 — Components](c3_feature_playback.md)
+  - [C3 — Components](c3_services_architecture.md)
 
 - **Design & Ops**
   - [Deployment](deployment.md)
@@ -18,7 +18,7 @@
   - [Build & Release Manual](build_manual_and_build_release.md)
 
 - **Interfaces & Data**
-  - [SSE & HTTPS Agreements](mqtt_https.md)
+  - [SSE & HTTPS Agreements](sse_https.md)
   - [ER Diagram](erd.md)
   - [Data Flow Diagram](dfd.md)
 
