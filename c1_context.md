@@ -16,24 +16,7 @@
 
 ## نمودار کانتکست (C1)
 
-```mermaid
-flowchart LR
-  User[User] --> Mobile[Mobile App]
-  User --> TV[TV App]
-  User --> Wall[Wall Control Panel]
-
-  Mobile --> SSE[SSE Service]
-  TV --> SSE
-  TV --> Weather
-
-  SSE --> Lights[Lighting]
-  SSE --> Audio[Audio]
-  SSE --> HVAC[Heating Cooling]
-  SSE --> Curtains[Curtains]
-  SSE --> Irrigation[Irrigation]
-
-  Mobile --> Weather[Weather Service]
-```
+![نمودار کانتکست](images/Context_diagram.png)
 
 ## مرزبندی
 

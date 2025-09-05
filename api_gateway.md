@@ -81,35 +81,14 @@ http://<ip>:1234/api/v1
 
 ## 1) Bootstrapping از روی QR
 
-![C1 Context Diagram](images/Bootstrapping_from_QR.png)
+![Bootstrapping از روی QR](images/Bootstrapping_from_QR.png)
 
 
 
 ## 2) اجرای سناریو
-```mermaid
-sequenceDiagram
-  participant APP as App
-  participant API as SmartHome API
 
-  APP->>API: GET /scenario           (Authorization if required)
-  API-->>APP: 200 {items: [...]}
+![اجرای سناریو](images/Run_the_scenario.png)
 
-  APP->>API: POST /scenario/run/{id} (Authorization if required)
-  API-->>APP: 200 {ok, traceId}
-```
+## 3) فرمان‌های RPC (از روی مثال ها)
 
-## 3) فرمان‌های RPC (مثال‌ها)
-```mermaid
-sequenceDiagram
-  participant APP as App
-  participant API as SmartHome API
-
-  APP->>API: POST /rpc Core.SwitchOnLight {channelNo,brightness,deviceId}
-  API-->>APP: 200 {data:{...}}
-
-  APP->>API: POST /rpc Core.AcPanelControl {type,value,deviceId}
-  API-->>APP: 200 {data:{...}}
-
-  APP->>API: POST /rpc Core.ACReadCurrentStatus {deviceId}
-  API-->>APP: 200 {data:{current}}
-```
+![فرمان‌های RPC](images/RPC_commands.png)

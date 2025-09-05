@@ -24,31 +24,5 @@
 ---
 
 ## دیاگرام لایه ها بر مبنای فولدر
-```mermaid
-%%{init: {'securityLevel': 'loose'}}%%
-flowchart TB
-  subgraph UI["UI Layer"]
-    SCR["Screens"]
-    WID["Widgets"]
-  end
 
-  subgraph Controllers["Controllers Layer"]
-    CTR["Controllers"]
-    PAR["Params"]
-  end
-
-  subgraph Core["Core Layer"]
-    CORELIB["core/lib"]
-    COREASSETS["core/assets"]
-    UTL["Utilities"]
-  end
-
-  SCR --> CTR
-  WID --> CTR
-  CTR --> CORELIB
-  CTR --> PAR
-  CTR --> UTL
-  SCR --> WID
-  CORELIB --> COREASSETS
-  UTL --> CORELIB
-```
+![C1 Context Diagram](images/Folder-based_layer_diagram.png)
