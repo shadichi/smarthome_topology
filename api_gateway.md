@@ -83,6 +83,8 @@ http://<ip>:1234/api/v1
 
 ![C1 Context Diagram](images/Bootstrapping_from_QR.png)
 
+
+
 ## 2) اجرای سناریو
 ```mermaid
 sequenceDiagram
