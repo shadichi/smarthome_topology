@@ -81,18 +81,7 @@ http://<ip>:1234/api/v1
 
 ## 1) Bootstrapping از روی QR
 
-```mermaid
-sequenceDiagram
-  participant APP as App
-  participant PANEL as Wall Panel (QR)
-  participant API as SmartHome API
-
-  APP->>PANEL: scan QR (ip, secretKey)
-  APP->>API: POST /phone/create {phone, secretkey} (base = http://ip:1234/api/v1)
-  API-->>APP: 200 {ok, token?}
-  APP->>API: GET /device/get-all
-  API-->>APP: 200 [devices]
-```
+![C1 Context Diagram](images/Bootstrapping_from_QR.png)
 
 ## 2) اجرای سناریو
 ```mermaid
