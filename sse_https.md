@@ -13,10 +13,9 @@
 http://<ip>:1234/api/v1
 (از QR گرفته می‌شود)
 
-### هدرهای استاندارد
+### هدرها
 - `Accept: application/json`
 - `Content-Type: application/json`
-- (اختیاری) `Authorization: Bearer <token>` برای مسیرهای حساس
 
 ### مسیرهای اصلی (نمونه‌ها از کد)
 
@@ -43,10 +42,5 @@ http://<ip>:1234/api/v1
 
 ### Endpoint
 GET http://<ip>:1234/api/v1/sse/stream
-
-### هدرها
-- `Accept: text/event-stream`
-- `Cache-Control: no-cache`
-
 
 توضیح کامل و نمونه کد ها و عملکرد داخل فایل swagger موجود می باشد

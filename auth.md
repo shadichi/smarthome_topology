@@ -1,7 +1,7 @@
 # Authentication / Authorization — Smart Home
 
 ## هدف
-توضیح اینکه اپ چطور خود را به گیت‌ وی محلی معرفی می‌کند (AuthN) . منبع اصلی اطلاعات، QR روی کنترل‌پنل دیواری است که `ip` و `secretKey` می‌دهد.
+توضیح اینکه اپ چطور خود را به گیت‌ وی محلی معرفی می‌کند (AuthN) . منبع اصلی اطلاعات، QR روی کنترل‌ پنل دیواری است که `ip` و `secretKey` می‌دهد.
 
 ---
 
@@ -27,7 +27,7 @@ Content-Type: application/json
 
 ## سناریو B — استفاده از API
 
-###  (مثال‌های استخراج‌شده از کد)
+###  (مثال‌هایی از کد)
 - `GET /device/get-all` (با Base URL محلی)
 - `GET /section/get-all`
 - `GET /sub-section/get-by-section-id-and-type/{sectionID}/{type}`
@@ -41,7 +41,7 @@ Content-Type: application/json
 
 ---
 
-## سناریو C — RPC (فرمان‌های دستگاه)
+## سناریو C — RPC
 
 همه RPCها از یک مسیر استفاده می‌کنند:  
 `POST /rpc`
