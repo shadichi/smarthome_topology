@@ -10,7 +10,6 @@
 
 ## نوع ذخیره‌سازی فعلی
 - **SharedPreferences (XML)**
-- نمونه‌ای که الان داری:
 ```xml
 <?xml version='1.0' encoding='utf-8' standalone='yes' ?>
 <map>

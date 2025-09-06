@@ -1,3 +1,4 @@
+<div dir="rtl">
 # C2 — Services Dependency Diagram (Smart Home)
 
 ## هدف
@@ -7,22 +8,19 @@
 
 ## ساختار فولدر و نقش هر کدام
 - `lib/controllers/`  
-  کنترل کننده ها  GetX یا معادل آن  منطق صفحه و فراخوانی یوزکیس و ریپو را هدایت می کند.
+  using GET X state manager
 - `lib/core/`  
-  کدهای مشترک و هسته ای. زیرشاخه ها:
-  - `core/assets/`  مسیرها و ثوابت مربوط به فایل های گرافیکی و متنی
-  - `core/lib/`     مدل ها  یوزکیس ها  ریپازیتوری ها  ابزار مشترک
-- `lib/params/`  
-  آبجکت های پارامتر برای ناوبری و فراخوانی ها  Data Transfer Objects
-- `lib/screens/`  
-  صفحات UI
+  کدهای مشترک و هسته ای:
+  - `core/assets/`  
+  - `core/lib/`
+- `lib/params/` 
+- `lib/screens/` 
 - `lib/utilities/`  
-  ابزارهای عمومی  زمان  فرمت  لاگ  نتورک رپر
 - `lib/widgets/`  
-  ویجت های قابل استفاده مجدد
 
 ---
 
 ## دیاگرام لایه ها بر مبنای فولدر
 
 ![C1 Context Diagram](images/Folder-based_layer_diagram.png)
+</div>

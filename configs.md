@@ -1,7 +1,8 @@
+<div dir="rtl">
 # Configs (dart-define) — Smart Home
 
 ## هدف
-مشخص‌کردن کلیدها و مقادیر تنظیمی که اپ باید از بیرون دریافت کند .  
+مشخص‌ کردن کلیدها و مقادیر تنظیمی که اپ باید از بیرون دریافت کند .  
 در حال حاضر مهم‌ترین مقادیر: **IP محلی گیت‌وی** و **SecretKey** که از روی QR خوانده می‌شوند.
 
 ---
@@ -19,7 +20,7 @@
 
 در زمان build می‌شود این مقادیر را تزریق کرد:
 
-```bash
+
 flutter run \
   --dart-define=BASE_URL=http://ip:1234/api/v1 \
   --dart-define=SECRET_KEY=xyz-secret \

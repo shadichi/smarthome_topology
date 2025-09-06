@@ -1,11 +1,7 @@
+<div dir="rtl">
+
 # Authentication / Authorization — Smart Home
 
-## هدف
-توضیح اینکه اپ چطور خود را به گیت‌ وی محلی معرفی می‌کند (AuthN) . منبع اصلی اطلاعات، QR روی کنترل‌ پنل دیواری است که `ip` و `secretKey` می‌دهد.
-
----
-
-## مفاهیم پایه
 - **Base URL (محلی):** بعد از اسکن QR ساخته می‌شود  
   `http://<ip>:1234/api/v1`
 - **secretKey:** فقط برای «ثبت کلاینت» استفاده می‌شود.
@@ -31,13 +27,8 @@ Content-Type: application/json
 - `GET /device/get-all` (با Base URL محلی)
 - `GET /section/get-all`
 - `GET /sub-section/get-by-section-id-and-type/{sectionID}/{type}`
-- هدرهای پایه:
-Accept: application/json
-Content-Type: application/json
-
 - `GET /scenario`
 - `POST /scenario/run/{id}`
-- `GET /setting`
 
 ---
 
@@ -75,4 +66,5 @@ Content-Type: application/json
 }
 }
 
+</div>
 

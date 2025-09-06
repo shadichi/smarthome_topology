@@ -1,16 +1,11 @@
+<div dir="rtl">
 # Build Manual — Digital Signage (Flutter TV)
 
-## هدف
-راهنمای ساخت اپ Android (موبایل یا TV) از سورس Flutter.
-
----
-
-## پیش‌نیازها
+## پیش‌ نیازها
 - Flutter SDK (ورژن 3.x)
 - Android Studio + SDK Tools
 - JDK 17 (یا سازگار)
 - دستگاه Android یا TV با USB debugging فعال
-- ADB روی PATH
 
 ---
 
@@ -19,6 +14,4 @@ flutter run
 
 ## build ریلیز (APK)
 flutter build apk --release
-
-
-
+</div>

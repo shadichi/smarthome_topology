@@ -1,25 +1,17 @@
+<div dir="rtl">
+
 # API Gateway or Routing Design — Smart Home
 
 ## هدف
-قرارداد ارتباط اپ با کنترل‌پنل/گیت‌وی محلی خانه هوشمند. QRCode از روی پنل **IP** و **secretKey** می‌دهد؛ اپ بر اساس آن **Base URL** را می‌ سازد و ثبت تلفن، سناریو و… را انجام می‌دهد.
+ ارتباط اپ با کنترل ‌پنل. QRCode از روی پنل **IP** و **secretKey** می‌دهد؛ اپ بر اساس آن **Base URL** را می‌ سازد و ثبت تلفن، سناریو و… را انجام می‌دهد.
 
 ---
 
 ## Base URL (از روی QR)
 - QR → `ip` و `secretKey`
 - **Base URL:**  
-http://<ip>:1234/api/v1
+http://ip:1234/api/v1
 مثال: `http://10.38.9.65:1234/api/v1`
-
-> برخی درخواست‌ها «بدون توکن»‌ند، برخی «با توکن» (در کد با `includeToken: true`). اگر احراز هویت سمت سرور فعال شد، هدر `Authorization: Bearer <token>` برای آن‌ها لازم است.
-
----
-
-## هدرهای استاندارد
-- `Accept: application/json`
-- `Content-Type: application/json`
-- (در صورت نیاز) `Authorization: Bearer <token>`
-- (اختیاری) `X-Device-Id: <clientId>` برای رهگیری
 
 ---
 
@@ -28,7 +20,7 @@ http://<ip>:1234/api/v1
 ### Device
 | Method | Path             | توضیح | نوت |
 |-------|------------------|------|-----|
-| GET   | `/device/get-all`| گرفتن فهرست دستگاه‌ها | **Base URL محلی با IP** |
+| GET   | `/device/get-all`| گرفتن لیست دستگاه‌ ها | **Base URL محلی با IP** |
 
 ### RPC (فرمان‌های دستگاه)
 همه با `POST /rpc` و بدنه‌ی JSON.
@@ -41,7 +33,7 @@ http://<ip>:1234/api/v1
 
 > پاسخ‌ها معمولاً شامل فیلد `data` هستند (در کد از `response["data"]` استفاده می‌کنی).
 
-### Section (اتاق/بخش)
+### Section
 | Method | Path                       | توضیح |
 |-------|----------------------------|------|
 | POST  | `/section/create`          | ساخت سکشن: `{name,color}` |
@@ -50,7 +42,7 @@ http://<ip>:1234/api/v1
 | GET   | `/section/get/{id}`        | گرفتن یک سکشن |
 | PUT   | `/section/update/{id}`     | بروزرسانی سکشن: `{name,color}` |
 
-### Sub-section (زیر‌بخش/نودها)
+### Sub-section 
 | Method | Path                                                | توضیح |
 |-------|-----------------------------------------------------|------|
 | POST  | `/sub-section/create`                               | ساخت زیر‌بخش: بدنه از `SubSectionModel.toJson()` |
@@ -60,15 +52,11 @@ http://<ip>:1234/api/v1
 | PUT   | `/sub-section/update/{subSectionID}`                | بروزرسانی: بدنه از `SubSectionModel.toJson()` |
 
 ### Scenario
-| Method | Path                       | توضیح | Auth |
-|-------|----------------------------|------|------|
-| POST  | `/scenario/run/{scenarioId}` | اجرای سناریو | `includeToken: true` |
-| GET   | `/scenario`                | لیست سناریوها | `includeToken: true` |
+| Method | Path                       | توضیح |
+|-------|----------------------------|------|
+| POST  | `/scenario/run/{scenarioId}` | اجرای سناریو | 
+| GET   | `/scenario`                | لیست سناریوها | 
 
-### Setting
-| Method | Path        | توضیح | Auth |
-|-------|-------------|------|------|
-| GET   | `/setting`  | دریافت تنظیمات | `includeToken: true` |
 
 ### Phone (ثبت کلاینت موبایل/TV)
 | Method | Path           | بدنه نمونه |
@@ -79,7 +67,7 @@ http://<ip>:1234/api/v1
 "secretkey": "<from-QR>"
 }
 
-## 1) Bootstrapping از روی QR
+## 1) دیاگرام اسکن QR code
 
 ![Bootstrapping از روی QR](images/Bootstrapping_from_QR.png)
 
@@ -92,3 +80,5 @@ http://<ip>:1234/api/v1
 ## 3) فرمان‌های RPC (از روی مثال ها)
 
 ![فرمان‌های RPC](images/RPC_commands.png)
+
+</div>
