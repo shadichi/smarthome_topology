@@ -1,4 +1,5 @@
 <div dir="rtl">
+
 # C2 — Services Dependency Diagram (Smart Home)
 
 ## هدف
@@ -23,4 +24,5 @@
 ## دیاگرام لایه ها بر مبنای فولدر
 
 ![C1 Context Diagram](images/Folder-based_layer_diagram.png)
+
 </div>

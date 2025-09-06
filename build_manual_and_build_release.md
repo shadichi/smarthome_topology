@@ -1,4 +1,5 @@
 <div dir="rtl">
+
 # Build Manual — Digital Signage (Flutter TV)
 
 ## پیش‌ نیازها
@@ -14,4 +15,5 @@ flutter run
 
 ## build ریلیز (APK)
 flutter build apk --release
+
 </div>

@@ -1,4 +1,5 @@
 <div dir="rtl">
+
 # Configs (dart-define) — Smart Home
 
 ## هدف
@@ -16,11 +17,4 @@
 
 ---
 
-## dart-define نمونه
-
-در زمان build می‌شود این مقادیر را تزریق کرد:
-
-
-flutter run \
-  --dart-define=BASE_URL=http://ip:1234/api/v1 \
-  --dart-define=SECRET_KEY=xyz-secret \
+</div>

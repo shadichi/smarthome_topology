@@ -1,3 +1,5 @@
+<div dir="rtl">
+
 # Database ER Diagram — Smart Home (Local)
 
 ## هدف
@@ -19,3 +21,5 @@
 ```
 
 همچنین IP و secret_key بعد از اسکن QR در همین فضای محلی ذخیره می‌شوند.
+
+</div>

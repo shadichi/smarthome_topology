@@ -1,3 +1,5 @@
+<div dir="rtl">
+
 # Deployment — Smart Home
 
 ## هدف
@@ -16,3 +18,5 @@
 3. **Production (Prod)**  
    - همان نسخه‌ای که روی تلویزیون‌ و موبایل واقعی نصب میشه.
 اپ Flutter با دستور flutter build apk --release ساخته و مستقیم روی دستگاه نصب میشه.  
+
+</div>

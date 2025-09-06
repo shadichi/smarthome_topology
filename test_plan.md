@@ -1,3 +1,5 @@
+<div dir="rtl">
+
 # Tests Plan — Smart Home (Flutter)
 
 ## وضعیت فعلی
@@ -40,3 +42,5 @@
 - همه تست‌ها:
 flutter test
 ---
+
+</div>

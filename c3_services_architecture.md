@@ -1,3 +1,5 @@
+<div dir="rtl">
+
 # C3 — Services Architecture (Smart Home)
 
 ## هدف
@@ -8,3 +10,5 @@
 ## Component Map 
 
 ![Component Map](images/Component_Map.png)
+
+</div>
