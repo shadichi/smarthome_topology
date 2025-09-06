@@ -2,7 +2,6 @@
 
 # SSE and HTTP Agreements — Smart Home
 
-## هدف
  قراردادهای ارتباطی اپ با سرور :
 - **SSE (Server-Sent Events):** برای رویدادهای لحظه‌ای.
 - **HTTP API:** برای فرمان‌ها، CRUD روی سکشن‌ها، سناریوها و RPC.
@@ -30,7 +29,6 @@ http://ip:1234/api/v1
 
 ## 2. SSE (Server-Sent Events)
 
-### Endpoint
 GET http://ip:1234/api/v1/sse/stream
 
 توضیح کامل و نمونه کد ها و عملکرد داخل فایل swagger موجود می باشد

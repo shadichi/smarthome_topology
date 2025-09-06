@@ -15,7 +15,7 @@ http://ip:1234/api/v1
 
 ---
 
-## مسیرها و متدها
+## مسیرها و متدها (مثال هایی از کد)
 
 ### Device
 | Method | Path             | توضیح | نوت |
@@ -23,7 +23,6 @@ http://ip:1234/api/v1
 | GET   | `/device/get-all`| گرفتن لیست دستگاه‌ ها | **Base URL محلی با IP** |
 
 ### RPC (فرمان‌های دستگاه)
-همه با `POST /rpc` و بدنه‌ی JSON.
 | Method | Path  | method_name                 | params نمونه |
 |-------|-------|-----------------------------|--------------|
 | POST  | `/rpc`| `Core.Scenario`             | `{"data":{"additionalProp1":{}},"device":{"deviceId":123,"deviceName":"test"}}` |
@@ -31,25 +30,6 @@ http://ip:1234/api/v1
 | POST  | `/rpc`| `Core.ACReadCurrentStatus`  | `{"data":{"additionalProp1":{}},"device":{"deviceId":123,"deviceName":"string"}}` |
 | POST  | `/rpc`| `Core.SwitchOnLight`        | `{"data":{"channelNo":1,"brightness":100,"runningTime":0},"device":{"deviceId":123,"deviceName":"test"}}` |
 
-> پاسخ‌ها معمولاً شامل فیلد `data` هستند (در کد از `response["data"]` استفاده می‌کنی).
-
-### Section
-| Method | Path                       | توضیح |
-|-------|----------------------------|------|
-| POST  | `/section/create`          | ساخت سکشن: `{name,color}` |
-| DELETE| `/section/delete/{id}`     | حذف سکشن |
-| GET   | `/section/get-all`         | گرفتن همه سکشن‌ها (**Base URL محلی**) |
-| GET   | `/section/get/{id}`        | گرفتن یک سکشن |
-| PUT   | `/section/update/{id}`     | بروزرسانی سکشن: `{name,color}` |
-
-### Sub-section 
-| Method | Path                                                | توضیح |
-|-------|-----------------------------------------------------|------|
-| POST  | `/sub-section/create`                               | ساخت زیر‌بخش: بدنه از `SubSectionModel.toJson()` |
-| DELETE| `/sub-section/delete/{id}`                          | حذف |
-| GET   | `/sub-section/get-by-section-id-and-type/{sid}/{t}`| فهرست زیر‌بخش‌های سکشن با نوع (**Base URL محلی**) |
-| GET   | `/sub-section/get/{subSectionID}`                   | دریافت زیر‌بخش |
-| PUT   | `/sub-section/update/{subSectionID}`                | بروزرسانی: بدنه از `SubSectionModel.toJson()` |
 
 ### Scenario
 | Method | Path                       | توضیح |

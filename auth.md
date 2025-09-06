@@ -2,19 +2,18 @@
 
 # Authentication / Authorization — Smart Home
 
-- **Base URL (محلی):** بعد از اسکن QR ساخته می‌شود  
-  `http://<ip>:1234/api/v1`
-- **secretKey:** فقط برای «ثبت کلاینت» استفاده می‌شود.
+- **Base URL:** بعد از اسکن QR ساخته می‌شود  
+  `http://ip:1234/api/v1`
+- **secretKey:**  برای «ثبت کلاینت» استفاده می‌شود.
 ---
 
-## سناریو A — ثبت کلاینت با QR (Provisioning)
+## سناریو A — ثبت کلاینت QR 
 
 1) **اسکن QR**  
    اپ `ip` و `secretKey` را می‌خواند و `BASE_URL = http://<ip>:1234/api/v1` می‌سازد.
 
 2) **ثبت کلاینت**  
 POST /phone/create
-Content-Type: application/json
 
 1) **ذخیره امن**  
 - `BASE_URL`، `secretKey` در SharedPrefrences ذخیره شود.
@@ -24,7 +23,7 @@ Content-Type: application/json
 ## سناریو B — استفاده از API
 
 ###  (مثال‌هایی از کد)
-- `GET /device/get-all` (با Base URL محلی)
+- `GET /device/get-all` 
 - `GET /section/get-all`
 - `GET /sub-section/get-by-section-id-and-type/{sectionID}/{type}`
 - `GET /scenario`
