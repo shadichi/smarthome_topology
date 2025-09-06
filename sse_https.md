@@ -3,8 +3,8 @@
 # SSE and HTTP Agreements — Smart Home
 
  قراردادهای ارتباطی اپ با سرور :
-- **SSE (Server-Sent Events):** برای رویدادهای لحظه‌ای.
-- **HTTP API:** برای فرمان‌ها، CRUD روی سکشن‌ها، سناریوها و RPC.
+- **SSE (Server-Sent Events):** برای رویدادهای لحظه‌ ای.
+- **HTTP API:** برای فرمان‌ها، سناریوها.
 
 ---
 
